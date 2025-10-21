@@ -327,7 +327,7 @@ CorrSteer: Correlation-based Steering with Sparse Autoencoders
 
 **Demo:** [huggingface.co/spaces/seonglae/CorrSteer](https://huggingface.co/spaces/seonglae/CorrSteer)
 
-**Paper:** ICLR 2026 (Submitted)
+**Paper:** Preprint [arxiv.org/abs/2508.12535](https://arxiv.org/abs/2508.12535)
 
 **Contact:** seonglae.cho@holisticai.com
 
