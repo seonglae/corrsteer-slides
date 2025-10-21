@@ -60,7 +60,7 @@ Correlation-based Steering with Sparse Autoencoders
 ---
 
 <div class="flex justify-center items-center h-full">
-  <img src="./corrsteer-emnlp/image/system_diagram.png" class="max-h-100" />
+  <img src="./image/system_diagram.png" class="max-h-100" />
 </div>
 
 <div class="text-xs text-center mt-4">
@@ -103,7 +103,7 @@ $$
 - **CorrSteer-A**: Top per layer (all)
 - **CorrSteer-P**: Validated pruning
 
-<img src="./corrsteer-emnlp/image/corrsteer_methods.png" class="mt-4" />
+<img src="./image/corrsteer_methods.png" class="mt-4" />
 
 **Key Properties**:
 - $O(1)$ memory streaming
@@ -197,11 +197,11 @@ Features align with structured reasoning and format adherence rather than demogr
 <div class="grid grid-cols-2 gap-4 mt-4">
 
 <div>
-<img src="./corrsteer-emnlp/image/gemma-harmbench.png" />
+<img src="./image/gemma-harmbench.png" />
 </div>
 
 <div>
-<img src="./corrsteer-emnlp/image/gemma2b_harmbench_global_frequency.png" />
+<img src="./image/gemma2b_harmbench_global_frequency.png" />
 <div class="text-xs text-center">Near 100% activation frequency</div>
 </div>
 
@@ -214,12 +214,12 @@ Features align with structured reasoning and format adherence rather than demogr
 <div class="grid grid-cols-2 gap-4">
 
 <div>
-<img src="./corrsteer-emnlp/image/gemma2b_simpleqa_global_frequency.png" />
+<img src="./image/gemma2b_simpleqa_global_frequency.png" />
 <div class="text-xs text-center">SimpleQA: ~0% frequency</div>
 </div>
 
 <div>
-<img src="./corrsteer-emnlp/image/gemma2b_harmbench_global_frequency.png" />
+<img src="./image/gemma2b_harmbench_global_frequency.png" />
 <div class="text-xs text-center">HarmBench: ~100% frequency</div>
 </div>
 
@@ -234,7 +234,7 @@ This indicates deeply embedded task-specific capabilities in the model
 # Sample Efficiency
 
 <div class="flex justify-center">
-<img src="./corrsteer-emnlp/image/gemma2b_mmlu_progress.png" class="h-100" />
+<img src="./image/gemma2b_mmlu_progress.png" class="h-100" />
 </div>
 
 - Effective with **~100 samples**, stable at **~4000 samples**
