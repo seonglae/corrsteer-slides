@@ -116,18 +116,10 @@ $$
 
 ---
 
-# Results: Accuracy (Gemma-2 2B)
+# Results: Performance
 
-<div class="text-sm">
-
-| Method | MMLU | MMLU-Pro | BBQ Ambig | BBQ Disambig | HarmBench | XSTest |
-|--------|------|----------|-----------|--------------|-----------|--------|
-| Non-steered | 52.21 | 30.40 | 59.46 | 75.38 | 46.61 | 86.35 |
-| **CorrSteer-S** | 52.99 | 30.38 | 62.39 | 75.70 | 46.61 | 86.77 |
-| **CorrSteer-P** | 54.70 | 30.63 | **66.00** | 76.48 | **66.08** | 86.46 |
-| **CorrSteer-A** | **55.48** | **30.93** | 62.06 | **76.53** | **73.75** | **86.98** |
-| Fine-tuning | **55.75** | **35.32** | -- | -- | -- | -- |
-
+<div class="flex justify-center items-center">
+  <img src="./image/performance.png" class="max-h-100" />
 </div>
 
 **Key Findings**:
@@ -139,71 +131,30 @@ $$
 
 # Results: Side Effect Ratio (SER)
 
-$$
-\text{SER} = \frac{\# \text{ negatively changed answers}}{\# \text{ all changed answers}}
-$$
-
-<div class="text-sm mt-4">
-
-| Task | CorrSteer-S | CorrSteer-P | CorrSteer-A | Fine-tuning |
-|------|-------------|-------------|-------------|-------------|
-| MMLU | 0.36 | **0.17** | 0.20 | 0.41 |
-| MMLU-Pro | **0.42** | **0.42** | **0.42** | 0.46 |
-| BBQ Ambig | **0.00** | **0.00** | 0.08 | -- |
-| HarmBench | 0.25 | 0.14 | **0.04** | -- |
-
+<div class="flex justify-center items-center">
+  <img src="./image/ser.png" class="max-h-100" />
 </div>
 
 **CorrSteer halves side effects** compared to fine-tuning while maintaining competitive accuracy
 
 ---
 
-# Discovered Features: BBQ Bias Mitigation
+# Interpretability: Discovered Features
 
-<div class="text-sm">
-
-**Disambiguous Context**:
-- [L17/5137](https://neuronpedia.org/gemma-2-2b/17-gemmascope-res-16k/5137): Mathematical symbols and functions related to field theories (corr: **0.559**)
-- [L20/12748](https://neuronpedia.org/gemma-2-2b/20-gemmascope-res-16k/12748): Structured data representations and their attributes (corr: 0.394)
-- [L19/15745](https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/15745): Phrases related to decision-making and choice in social contexts (corr: 0.226)
-
-**Ambiguous Context**:
-- [L17/11021](https://neuronpedia.org/gemma-2-2b/17-gemmascope-res-16k/11021): Phrases related to scientific research and findings (corr: **0.554**)
-- [L18/14447](https://neuronpedia.org/gemma-2-2b/18-gemmascope-res-16k/14447): References to medical data and statistics (corr: 0.533)
-- [L10/4557](https://neuronpedia.org/gemma-2-2b/10-gemmascope-res-16k/4557): Interactions involving guessing or determining the correctness of information (corr: 0.202)
-
+<div class="flex justify-center items-center">
+  <img src="./image/interp.png" class="max-h-100" />
 </div>
 
 <div class="text-xs mt-2">
-Features align with structured reasoning and format adherence rather than demographic content
-</div>
 
----
+**BBQ Disambiguous** (corr: 0.559):
+[L17/5137](https://neuronpedia.org/gemma-2-2b/17-gemmascope-res-16k/5137) Mathematical symbols · [L20/12748](https://neuronpedia.org/gemma-2-2b/20-gemmascope-res-16k/12748) Structured data · [L19/15745](https://neuronpedia.org/gemma-2-2b/19-gemmascope-res-16k/15745) Decision-making
 
-# Discovered Features: HarmBench Safety
+**BBQ Ambiguous** (corr: 0.554):
+[L17/11021](https://neuronpedia.org/gemma-2-2b/17-gemmascope-res-16k/11021) Scientific findings · [L18/14447](https://neuronpedia.org/gemma-2-2b/18-gemmascope-res-16k/14447) Medical statistics · [L10/4557](https://neuronpedia.org/gemma-2-2b/10-gemmascope-res-16k/4557) Correctness checking
 
-<div class="text-sm">
-
-**Top Correlated Features** (all >0.7 correlation):
-
-- [L7/11722](https://neuronpedia.org/gemma-2-2b/7-gemmascope-res-16k/11722): Phrases related to legal terms and the rejection of arguments in court cases (corr: **0.779**)
-- [L9/9298](https://neuronpedia.org/gemma-2-2b/9-gemmascope-res-16k/9298): Strongly negative or dismissive opinions about claims and arguments (corr: 0.775)
-- [L14/2949](https://neuronpedia.org/gemma-2-2b/14-gemmascope-res-16k/2949): Statements and phrases related to political criticism and condemnation (corr: 0.739)
-- [L15/1570](https://neuronpedia.org/gemma-2-2b/15-gemmascope-res-16k/1570): Judgments regarding moral and ethical standards related to exploitation and human rights issues (corr: 0.742)
-- [L25/3912](https://neuronpedia.org/gemma-2-2b/25-gemmascope-res-16k/3912): Negative sentiments or refusals (corr: 0.711)
-
-</div>
-
-<div class="grid grid-cols-2 gap-4 mt-4">
-
-<div>
-<img src="./image/gemma-harmbench.png" />
-</div>
-
-<div>
-<img src="./image/gemma2b_harmbench_global_frequency.png" />
-<div class="text-xs text-center">Near 100% activation frequency</div>
-</div>
+**HarmBench** (corr: 0.779):
+[L7/11722](https://neuronpedia.org/gemma-2-2b/7-gemmascope-res-16k/11722) Legal rejection · [L9/9298](https://neuronpedia.org/gemma-2-2b/9-gemmascope-res-16k/9298) Dismissive opinions · [L25/3912](https://neuronpedia.org/gemma-2-2b/25-gemmascope-res-16k/3912) Negative refusals
 
 </div>
 
@@ -245,15 +196,8 @@ This indicates deeply embedded task-specific capabilities in the model
 
 # Cross-Task Transferability
 
-<div class="text-sm">
-
-| Source → Target | MMLU | MMLU-Pro | BBQ Disambig | BBQ Ambig |
-|-----------------|------|----------|--------------|-----------|
-| **MMLU** | **56.32** (52.23) | **19.67** (14.00) | 74.62 (75.42) | **64.01** (59.10) |
-| **MMLU-Pro** | 55.73 (52.23) | 17.56 (14.00) | 76.10 (75.42) | 60.97 (59.10) |
-| **BBQ Disambig** | 54.74 (52.23) | 16.11 (14.00) | **76.53** (75.42) | 60.85 (59.10) |
-| **BBQ Ambig** | 53.85 (52.23) | 11.01 (14.00) | 76.10 (75.42) | 62.08 (59.10) |
-
+<div class="flex justify-center items-center">
+  <img src="./image/transferability.png" class="max-h-100" />
 </div>
 
 - MMLU ↔ MMLU-Pro: Strong transfer (shared format)
@@ -262,17 +206,10 @@ This indicates deeply embedded task-specific capabilities in the model
 
 ---
 
-# Ablation: Pooling Strategy
+# Ablation Studies
 
-<div class="text-sm">
-
-| Task | Non-steered | Max-pooling | Mean-pooling | All-token |
-|------|-------------|-------------|--------------|-----------|
-| MMLU | 52.23 | **56.32** | 56.32 | 52.91 |
-| BBQ Disambig | 75.42 | **76.53** | 76.53 | 75.00 |
-| HarmBench | 44.64 | **67.50** | 0.00 | 47.14 |
-| XSTest | 86.35 | **87.30** | 53.65 | 86.35 |
-
+<div class="flex justify-center items-center">
+  <img src="./image/ablation.png" class="max-h-100" />
 </div>
 
 **Max-pooling wins**: Captures peak activations, filters noise
