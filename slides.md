@@ -53,8 +53,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
-- Changes many answers, including on unrelated tasks
-- Can compromise safety even without any intent
+- Side effects make the model vulnerable, even without any intent
+- Benign, commonly used datasets alone can cause it
 - Updates all weights, not interpretable or reversible
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
