@@ -53,7 +53,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
-- Updates all weights, not interpretable or reversible
+- Updates all weights, not interpretable
+- Needs retraining to change behavior
 - Can compromise safety even without any intent
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
@@ -64,6 +65,7 @@ fonts:
 <div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
 - No weight update, composable and applicable during inference
+- Targets specific features, not the whole model
 - Adds interpretable feature directions to activations
 
 </div>
