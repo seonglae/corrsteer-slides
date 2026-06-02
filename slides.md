@@ -84,8 +84,8 @@ Three bottlenecks we remove
 <div class="grid grid-cols-3 gap-6 mt-8">
 <div>
 
-## Data cost
-Contrastive datasets or huge activation stores required
+## Contrastive dataset
+Paired contrastive data or huge activation stores required
 
 </div>
 <div>
