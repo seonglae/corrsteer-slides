@@ -183,21 +183,9 @@ Applied only at generation positions ($t \geq n$). The **SAE is not needed at in
 layout: full
 ---
 
-<div class="mx-auto mt-2" style="max-width: 800px">
+<div class="mx-auto mt-2" style="max-width: 720px">
 <HtmlEmbed src="variant-selector" data="features_gemma_all.json,features_llama_all.json" />
 </div>
-
-<div class="mx-auto mt-3 grid grid-cols-3 gap-4 text-sm" style="max-width: 800px">
-<div class="p-2 bg-blue-50 dark:bg-blue-900 rounded"><b>S</b>: single most-correlated feature, globally</div>
-<div class="p-2 bg-green-50 dark:bg-green-900 rounded"><b>A</b>: top feature from every layer</div>
-<div class="p-2 bg-yellow-50 dark:bg-yellow-900 rounded"><b>P</b>: A plus pruning to a minimal subcircuit</div>
-</div>
-
----
-layout: full
----
-
-<HtmlEmbed src="feature-space-3d" data="features_gemma_all.json,features_llama_all.json" frameless />
 
 ---
 layout: full
@@ -205,19 +193,11 @@ layout: full
 
 <HtmlEmbed src="performance-dashboard" data="accuracy_results_full.json" />
 
-<div class="mt-2 p-3 bg-green-50 dark:bg-green-900 rounded text-sm">
-<b>+3.3% MMLU, +27.1% HarmBench.</b> Matches fine-tuning on MMLU (55.48 vs 55.75) while <b>halving the Side Effect Ratio (0.21 vs 0.41)</b>.
-</div>
-
 ---
 layout: full
 ---
 
 <HtmlEmbed src="ser-comparison" data="ser_results.json" />
-
-<div class="mt-2 p-3 bg-blue-50 dark:bg-blue-900 rounded text-sm">
-SER = fraction of changed answers that become wrong. On MMLU, CorrSteer-A changes <b>879</b> answers vs fine-tuning's <b>2,724</b>: same accuracy, far fewer side effects.
-</div>
 
 ---
 
@@ -250,7 +230,9 @@ layout: full
 layout: full
 ---
 
+<div class="absolute top-3 left-6 right-6">
 <HtmlEmbed src="safety-dashboard" data="safety_breakdown.json" />
+</div>
 
 ---
 
@@ -299,7 +281,9 @@ HarmBench refusal **0.71% to 17.86%**, injecting refusal that was never trained.
 layout: full
 ---
 
+<div class="absolute top-3 left-0 right-0 mx-auto" style="max-width: 720px">
 <HtmlEmbed src="feature-explorer" data="features_gemma_all.json,features_llama_all.json" />
+</div>
 
 ---
 layout: center
@@ -329,7 +313,7 @@ class: text-center
 # Thank You
 
 <div class="mt-2 text-lg opacity-75">
-Generation-time, all-layer static steering: minimal steering that preserves capability and improves task-specific performance
+Generation-time, all-layer static steering: minimal steering that improves task-specific performance
 </div>
 
 <div class="flex gap-2 justify-center flex-wrap mt-8">
@@ -338,6 +322,7 @@ Generation-time, all-layer static steering: minimal steering that preserves capa
   <a href="https://huggingface.co/spaces/seonglae/CorrSteer" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Demo-yellow" alt="HuggingFace"/></a>
   <a href="https://github.com/seonglae/CorrSteer" target="_blank"><img src="https://img.shields.io/badge/Code-GitHub-181717?logo=github" alt="GitHub"/></a>
   <a href="https://corrsteer.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Slides-Slidev-87CEEB.svg" alt="Slides"/></a>
+  <a href="https://seongland.com/article/crl" target="_blank"><img src="https://img.shields.io/badge/Next-Control%20Reinforcement-6B5CE7" alt="CRL"/></a>
 </div>
 
 <div class="mt-6 text-sm opacity-70">
