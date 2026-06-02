@@ -90,8 +90,8 @@ Contrastive datasets or huge activation stores required
 </div>
 <div>
 
-## Static-time selection
-Features selected in the **static context**, not at **generation-time** steering
+## Context tokens
+Features selected from **context tokens** in static time, not at **generation-time** steering
 
 </div>
 <div>
