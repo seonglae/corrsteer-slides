@@ -281,9 +281,9 @@ layout: center
 
 1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
 
-2. **One interpretable feature per layer, across all layers**: a net task-performance gain with low side effects.
+2. **Correlation-extracted features reveal semantic task relevance**, interpretable per task.
 
-3. **Compatible with fine-tuning**: CorrSteer stacks on top of fine-tuned models rather than replacing them.
+3. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
 
 </div>
 
