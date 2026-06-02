@@ -272,14 +272,6 @@ HarmBench refusal **0.71% to 17.86%**, injecting refusal that was never trained.
 </div>
 
 ---
-layout: full
----
-
-<div class="absolute top-3 left-0 right-0 mx-auto" style="max-width: 620px">
-<HtmlEmbed src="feature-explorer" data="features_gemma_all.json,features_llama_all.json" />
-</div>
-
----
 layout: center
 ---
 
