@@ -222,7 +222,7 @@ Are the gains just fixing output format? Remove <b>all</b> structural features (
 <div class="mt-4 text-base leading-relaxed">
 
 - **Knowledge, not formatting**: 89% of the MMLU gain survives with zero structural features; on BBQ, semantic-only even exceeds the full method
-- **Low side effects**: most changed answers are corrections, not regressions (SER 0.21 vs fine-tuning 0.41)
+- **Low side effects**: CorrSteer changes far fewer answers than fine-tuning, 879 vs 2,724 on MMLU (about 3x fewer)
 
 </div>
 
