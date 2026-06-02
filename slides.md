@@ -219,8 +219,11 @@ Are the gains just fixing output format? Remove <b>all</b> structural features (
   </tbody>
 </table>
 
-<div class="mt-4 p-5 bg-green-50 dark:bg-green-900 rounded text-lg leading-relaxed">
-<b>89% of the MMLU gain survives</b> with zero structural features (10x lower variance). On BBQ, semantic-only <b>exceeds</b> the full method, on bias reasoning where formatting cannot explain +4.47%. Knowledge, not formatting tricks.
+<div class="mt-4 text-base leading-relaxed">
+
+- **Knowledge, not formatting**: 89% of the MMLU gain survives with zero structural features; on BBQ, semantic-only even exceeds the full method
+- **Low side effects**: most changed answers are corrections, not regressions (SER 0.21 vs fine-tuning 0.41)
+
 </div>
 
 ---
