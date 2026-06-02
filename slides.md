@@ -289,7 +289,7 @@ layout: center
 
 </div>
 
-<div class="mx-auto mt-8 text-sm opacity-60 text-center" style="max-width: 780px">
+<div class="mx-auto mt-8 text-lg opacity-60 text-center" style="max-width: 780px">
 Future work: dynamic steering via Control Reinforcement, <a href="https://seongland.com/article/crl" target="_blank">seongland.com/article/crl</a>
 </div>
 
