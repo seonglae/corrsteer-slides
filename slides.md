@@ -64,8 +64,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
-- No weight update, applicable during inference
-- Composable across features
+- No weight update, interpretable
+- Applicable during inference
 - Targets specific features, not the whole model
 
 </div>
