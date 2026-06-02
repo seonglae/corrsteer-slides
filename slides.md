@@ -281,7 +281,7 @@ layout: center
 
 1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
 
-2. **Per-layer steering across all layers is feasible**: one feature per layer, applied simultaneously at generation time.
+2. **Per-layer steering across multiple layers is feasible**: reveals task-relevant features.
 
 3. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
 
