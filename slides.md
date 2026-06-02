@@ -281,7 +281,7 @@ layout: center
 
 1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
 
-2. **One interpretable feature per layer pushes static steering to its limit**: a net gain with half the side effects of fine-tuning.
+2. **One interpretable feature per layer, across all layers**: a net task-performance gain with low side effects.
 
 3. **Automated, interpretable, reversible**: features selected with no tuning, each traceable to a human-readable SAE description, adjustable without retraining.
 
