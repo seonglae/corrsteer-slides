@@ -279,11 +279,13 @@ layout: center
 
 <div class="mx-auto text-lg text-left leading-relaxed" style="max-width: 780px">
 
-1. **Generation-time activations, pooling, and positive-sample coefficients are portable design choices**, transferring across other steering methods and reflecting an LLM's capabilities.
+1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
 
-2. **Correlation-extracted features reveal semantic task relevance**, interpretable per task.
+2. **Per-layer steering across all layers is feasible**: one feature per layer, applied simultaneously at generation time.
 
-3. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
+3. **Correlation-extracted features reveal semantic task relevance**, interpretable per task.
+
+4. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
 
 </div>
 
