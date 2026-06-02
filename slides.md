@@ -279,7 +279,7 @@ layout: center
 
 <div class="mx-auto text-lg text-left leading-relaxed" style="max-width: 780px">
 
-1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
+1. **Generation-time activations, pooling, and positive-sample coefficients are portable design choices**, transferring across other steering methods and reflecting an LLM's capabilities.
 
 2. **Correlation-extracted features reveal semantic task relevance**, interpretable per task.
 
