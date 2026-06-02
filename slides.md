@@ -53,7 +53,7 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
-- Updates all weights, not interpretable
+- Updates every parameter, not interpretable
 - Side effects of a change cannot be estimated
 - Can compromise safety even without any intent
 
@@ -64,8 +64,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
-- No weight update, interpretable
-- Applicable during inference
+- No weight update; monosemantic, interpretable features
+- Applicable during inference, composable
 - Targets specific features, not the whole model
 
 </div>
