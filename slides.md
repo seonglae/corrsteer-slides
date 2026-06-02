@@ -53,11 +53,11 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">Fine-tuning compromises safety</div>
 
-- A few adversarially designed examples break safety alignment
-- Even benign, commonly used datasets can degrade it
+- Side effects make the model vulnerable, even without any intent
+- Benign, commonly used datasets alone can cause it
 - Updates all weights, not interpretable or reversible
 
-<div class="text-xs opacity-50 mt-3">Qi et al., 2023 (arXiv:2310.03693)</div>
+<div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
 
 </div>
 <div>
@@ -114,6 +114,13 @@ layout: full
 
 <div class="mx-auto" style="max-width: 880px">
 <HtmlEmbed src="corrsteer-pipeline" frameless />
+</div>
+
+<div class="mx-auto mt-3 text-base" style="max-width: 880px">
+
+- Fully automated two-stage pipeline: correlation as the selection heuristic, intervention as the causal test
+- No contrastive data, no backward pass, no task-specific tuning
+
 </div>
 
 ---

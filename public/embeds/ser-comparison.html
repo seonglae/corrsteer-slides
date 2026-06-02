@@ -3,11 +3,19 @@
   .ser-comparison {
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* legend below the chart (like the accuracy dashboard) */
   .ser-comparison svg {
     display: block;
     width: 100%;
+    order: 1;
+  }
+  .ser-comparison .legend-bar {
+    order: 2;
+    margin-top: 8px;
   }
 
   .ser-comparison .bar {
