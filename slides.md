@@ -279,7 +279,7 @@ layout: center
 
 <div class="mx-auto text-lg text-left leading-relaxed" style="max-width: 780px">
 
-1. **Generation-time features reflect an LLM's capabilities**, portable across CAA, DSG, and SPARE.
+1. **Generation-time features reflect an LLM's capabilities**, portable across other steering methods.
 
 2. **One interpretable feature per layer pushes static steering to its limit**: a net gain with half the side effects of fine-tuning.
 
