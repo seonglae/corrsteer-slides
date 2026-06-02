@@ -53,7 +53,7 @@ Fine-tuning is a shotgun; we want switches
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
 
-<div class="text-xl font-bold mb-5">Fine-tuning, a genome edit with a shotgun</div>
+<div class="text-2xl font-bold mb-5">Fine-tuning, a genome edit with a shotgun</div>
 
 - Hits the target, damages unrelated abilities
 - A few adversarial examples break safety alignment
@@ -62,7 +62,7 @@ Fine-tuning is a shotgun; we want switches
 </div>
 <div>
 
-<div class="text-xl font-bold mb-5">SAE features, interpretable switches</div>
+<div class="text-2xl font-bold mb-5">SAE features, interpretable switches</div>
 
 - Decompose activations into human-readable directions
 - "refusal to harmful requests", "mathematical reasoning"
@@ -73,10 +73,6 @@ Fine-tuning is a shotgun; we want switches
 
 <div class="mt-6 p-5 bg-blue-50 dark:bg-blue-900 rounded text-lg leading-relaxed">
 <b>Linear Representation Hypothesis</b>: networks encode concepts as directions. SAEs find a sparse basis where each direction is one concept, so steering is just adding a direction.
-</div>
-
-<div class="mt-4 text-sm opacity-70">
-CorrSteer keeps the upside of fine-tuning, better task behavior, without the collateral damage: it flips a few interpretable feature switches instead of moving every weight, and it picks those switches automatically from generation-time activations.
 </div>
 
 ---
@@ -94,14 +90,14 @@ Contrastive datasets or huge activation stores required
 </div>
 <div>
 
-## Wrong tokens
-Features picked from **context** (the prompt), not the **generated output**
+## Static-time selection
+Features selected in the **static context**, not at **generation-time** steering
 
 </div>
 <div>
 
-## Wrong locus
-Single layer or few layers, hand-tuned coefficients
+## Narrow locus
+Single layer or a few layers, hand-tuned coefficients
 
 </div>
 </div>
@@ -227,14 +223,6 @@ layout: full
 <HtmlEmbed src="ablation-pooling" data="ablation_data.json" />
 
 ---
-layout: full
----
-
-<div class="absolute top-3 left-6 right-6">
-<HtmlEmbed src="safety-dashboard" data="safety_breakdown.json" />
-</div>
-
----
 
 # Safety: Pareto, Not Blanket Refusal
 
@@ -281,7 +269,7 @@ HarmBench refusal **0.71% to 17.86%**, injecting refusal that was never trained.
 layout: full
 ---
 
-<div class="absolute top-3 left-0 right-0 mx-auto" style="max-width: 720px">
+<div class="absolute top-3 left-0 right-0 mx-auto" style="max-width: 620px">
 <HtmlEmbed src="feature-explorer" data="features_gemma_all.json,features_llama_all.json" />
 </div>
 
