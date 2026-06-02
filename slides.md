@@ -54,7 +54,7 @@ fonts:
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
 - Updates all weights, not interpretable
-- Needs retraining to change behavior
+- Side effects on unrelated tasks
 - Can compromise safety even without any intent
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
@@ -66,7 +66,7 @@ fonts:
 
 - No weight update, composable and applicable during inference
 - Targets specific features, not the whole model
-- Adds interpretable feature directions to activations
+- Limited application to general benchmarks
 
 </div>
 </div>
@@ -79,7 +79,7 @@ fonts:
 
 # The Gap in Prior SAE Steering
 
-Three bottlenecks we remove
+Three problems to solve for application on general benchmarks
 
 <div class="grid grid-cols-3 gap-6 mt-8">
 <div>
