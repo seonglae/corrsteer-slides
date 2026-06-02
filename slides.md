@@ -197,12 +197,6 @@ layout: full
 <HtmlEmbed src="performance-dashboard" data="accuracy_results_full.json" />
 
 ---
-layout: full
----
-
-<HtmlEmbed src="ser-comparison" data="ser_results.json" />
-
----
 
 # Format, or Knowledge?
 
