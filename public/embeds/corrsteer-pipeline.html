@@ -349,8 +349,9 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  function __cpInit() {
     const root = document.getElementById('corrsteer-pipeline');
+    if (!root) return;
     const container = root.querySelector('.pipeline-stages');
 
     // ---- Dark mode detection (JS-based, like other embeds) ----
@@ -882,5 +883,7 @@
     document.addEventListener('click', function(e) {
       if (!root.contains(e.target)) { hoveredFeature = -1; resetAllStages(); }
     });
-  });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', __cpInit);
+  else __cpInit();
 </script>
