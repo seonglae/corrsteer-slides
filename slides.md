@@ -48,8 +48,6 @@ fonts:
 
 # Motivation
 
-Fine-tuning is a shotgun; we want switches
-
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
 
