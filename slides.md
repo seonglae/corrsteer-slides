@@ -142,8 +142,8 @@ $$r_i = \frac{\text{Cov}(z_i, y)}{\sqrt{\text{Var}(z_i)\cdot \text{Var}(y)}}$$
 </div>
 <div>
 
-<div class="p-3 bg-blue-50 dark:bg-blue-900 rounded text-sm">
-Streaming accumulator (Welford): <b>O(1) memory per feature</b>, any dataset size. No activation storage, no backward pass.
+<div class="p-4 bg-blue-50 dark:bg-blue-900 rounded text-base">
+Streaming accumulator: <b>O(1) memory per feature</b>, any dataset size. No activation storage, no backward pass.
 </div>
 
 </div>
@@ -178,8 +178,8 @@ Applied only at generation positions ($t \geq n$). The **SAE is not needed at in
 </div>
 </div>
 
-<div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900 rounded text-sm">
-<b>Positive-only is not a detail.</b> Subtracting negatively-correlated features <i>degrades</i> the model (JumpReLU and TopK activations are non-negative): amplify success, do not suppress failure.
+<div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900 rounded text-base">
+<b>Positive-only design</b>: amplifying positively-correlated features helps; subtracting negatively-correlated ones degrades or destabilizes performance.
 </div>
 
 ---
