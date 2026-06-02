@@ -459,9 +459,15 @@
 
         render();
 
-        // Responsive
+        // Responsive: only re-render on WIDTH change. render() sets svg height,
+        // which changes container height and would otherwise retrigger the
+        // observer in a feedback loop (the flicker).
         let resizeTimer;
+        let lastW = container.clientWidth;
         const ro = new ResizeObserver(() => {
+          const w = container.clientWidth;
+          if (w === lastW) return;
+          lastW = w;
           clearTimeout(resizeTimer);
           resizeTimer = setTimeout(render, 80);
         });
