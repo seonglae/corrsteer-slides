@@ -283,7 +283,7 @@ layout: center
 
 2. **One interpretable feature per layer, across all layers**: a net task-performance gain with low side effects.
 
-3. **Automated, interpretable, reversible**: features selected with no tuning, each traceable to a human-readable SAE description, adjustable without retraining.
+3. **Compatible with fine-tuning**: CorrSteer stacks on top of fine-tuned models rather than replacing them.
 
 </div>
 
