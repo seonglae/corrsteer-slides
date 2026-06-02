@@ -32,7 +32,12 @@ function configAttr(): string | null {
 // Embeds read document.documentElement[data-theme]; Slidev toggles a `dark` class.
 function syncTheme() {
   const dark = document.documentElement.classList.contains('dark')
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+  const next = dark ? 'dark' : 'light'
+  // only write when it actually changes, otherwise embeds that observe
+  // data-theme (e.g. ser-comparison) re-render on every Slidev class toggle and flicker
+  if (document.documentElement.getAttribute('data-theme') !== next) {
+    document.documentElement.setAttribute('data-theme', next)
+  }
 }
 
 function reexecuteScripts(root: HTMLElement) {

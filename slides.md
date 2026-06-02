@@ -199,18 +199,24 @@ layout: full
 
 # Format, or Knowledge?
 
-The experiment that won the rebuttal
-
-<div class="mt-2">
-
-Reviewers asked: are gains just fixing output format? We removed **all** structural features (semicolons, colons, XML; 11 of 25 layers) and steered with **semantic only** (medical, research, math; 14 layers).
-
-| | Non-steered | Semantic-only | Full CorrSteer-A |
-|---|---|---|---|
-| MMLU | 52.21% | **55.12% &plusmn;0.06** | 55.48% &plusmn;0.59 |
-| BBQ Ambig | 59.46% | **63.93% &plusmn;0.14** | 62.06% &plusmn;0.84 |
-
+<div class="mt-2 text-base opacity-80">
+Are the gains just fixing output format? Remove <b>all</b> structural features (semicolons, colons, XML; 11 of 25 layers) and steer with <b>semantic features only</b> (medical, research, math; 14 layers).
 </div>
+
+<table class="w-full text-sm rounded-lg overflow-hidden mt-4">
+  <thead>
+    <tr class="bg-gray-200 dark:bg-gray-700">
+      <th class="p-2 text-left"></th>
+      <th class="p-2 text-left">Non-steered</th>
+      <th class="p-2 text-left">Semantic-only</th>
+      <th class="p-2 text-left">Full CorrSteer-A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bg-white dark:bg-gray-900"><td class="p-2 font-bold">MMLU</td><td class="p-2">52.21%</td><td class="p-2 font-bold">55.12% &plusmn;0.06</td><td class="p-2">55.48% &plusmn;0.59</td></tr>
+    <tr class="bg-gray-50 dark:bg-gray-800"><td class="p-2 font-bold">BBQ Ambig</td><td class="p-2">59.46%</td><td class="p-2 font-bold">63.93% &plusmn;0.14</td><td class="p-2">62.06% &plusmn;0.84</td></tr>
+  </tbody>
+</table>
 
 <div class="mt-4 p-5 bg-green-50 dark:bg-green-900 rounded text-lg leading-relaxed">
 <b>89% of the MMLU gain survives</b> with zero structural features (10x lower variance). On BBQ, semantic-only <b>exceeds</b> the full method, on bias reasoning where formatting cannot explain +4.47%. Knowledge, not formatting tricks.
