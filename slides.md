@@ -53,9 +53,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
-- Side effects make the model vulnerable, even without any intent
-- Benign, commonly used datasets alone can cause it
 - Updates all weights, not interpretable or reversible
+- Can compromise safety even without any intent
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
 
@@ -64,9 +63,8 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
+- No weight update, composable and applicable during inference
 - Adds interpretable feature directions to activations
-- No weight update, reversible at inference
-- Prior methods still need contrastive data or context-token selection
 
 </div>
 </div>
