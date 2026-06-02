@@ -118,8 +118,8 @@ layout: full
 
 <div class="mx-auto mt-3 text-base" style="max-width: 880px">
 
-- Fully automated two-stage pipeline: correlation as the selection heuristic, intervention as the causal test
 - No contrastive data, no backward pass, no task-specific tuning
+- Streaming O(1) memory per feature, scales to 10<sup>5</sup>+ SAE features
 
 </div>
 
