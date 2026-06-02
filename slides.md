@@ -51,11 +51,13 @@ fonts:
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
 
-<div class="text-2xl font-bold mb-5">Fine-tuning</div>
+<div class="text-2xl font-bold mb-5">Fine-tuning compromises safety</div>
 
-- Updates all model weights
-- Side effects on unrelated tasks
-- Not interpretable, not reversible without retraining
+- A few adversarially designed examples break safety alignment
+- Even benign, commonly used datasets can degrade it
+- Updates all weights, not interpretable or reversible
+
+<div class="text-xs opacity-50 mt-3">Qi et al., 2023 (arXiv:2310.03693)</div>
 
 </div>
 <div>
