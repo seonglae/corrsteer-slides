@@ -51,10 +51,10 @@ fonts:
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
 
-<div class="text-2xl font-bold mb-5">Fine-tuning compromises safety</div>
+<div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
-- Side effects make the model vulnerable, even without any intent
-- Benign, commonly used datasets alone can cause it
+- Changes many answers, including on unrelated tasks
+- Can compromise safety even without any intent
 - Updates all weights, not interpretable or reversible
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
@@ -222,7 +222,7 @@ Are the gains just fixing output format? Remove <b>all</b> structural features (
 <div class="mt-4 p-5 bg-green-50 dark:bg-green-900 rounded text-base leading-relaxed">
 
 - **Knowledge, not formatting**: 89% of the MMLU gain survives with zero structural features; on BBQ, semantic-only even exceeds the full method
-- **Low side effects**: CorrSteer changes far fewer answers than fine-tuning, 879 vs 2,724 on MMLU (about 3x fewer)
+- **Low side effects**: CorrSteer changes far fewer answers than post-training, 879 vs 2,724 on MMLU (about 3x fewer)
 
 </div>
 
@@ -287,7 +287,7 @@ layout: center
 
 2. **Per-layer steering across multiple layers is feasible**: reveals task-relevant features.
 
-3. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
+3. **Steering is compatible with post-training**: it stacks on top of post-trained models rather than replacing them.
 
 </div>
 
