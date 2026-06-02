@@ -54,7 +54,7 @@ fonts:
 <div class="text-2xl font-bold mb-5">Post-training has large side effects</div>
 
 - Updates all weights, not interpretable
-- Side effects on unrelated tasks
+- Side effects of a change cannot be estimated
 - Can compromise safety even without any intent
 
 <div class="text-xs opacity-50 mt-3">Qi et al., 2023, "Fine-tuning Aligned LMs Compromises Safety"</div>
