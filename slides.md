@@ -64,15 +64,19 @@ fonts:
 
 <div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
-- No weight update, composable and applicable during inference
+- No weight update, applicable during inference
+- Composable across features
 - Targets specific features, not the whole model
-- Limited application to general benchmarks
 
 </div>
 </div>
 
 <div class="mt-6 p-5 bg-blue-50 dark:bg-blue-900 rounded text-lg leading-relaxed">
 <b>Linear Representation Hypothesis</b>: networks encode concepts as directions in activation space. SAEs recover a sparse basis where each direction is one concept, so steering is adding a direction.
+</div>
+
+<div class="mt-3 text-base opacity-80">
+But existing SAE steering has limited application to general benchmarks.
 </div>
 
 ---
