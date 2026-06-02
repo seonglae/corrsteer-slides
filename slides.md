@@ -283,9 +283,7 @@ layout: center
 
 2. **Per-layer steering across all layers is feasible**: one feature per layer, applied simultaneously at generation time.
 
-3. **Correlation-extracted features reveal semantic task relevance**, interpretable per task.
-
-4. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
+3. **Steering is compatible with fine-tuning**: it stacks on top of fine-tuned models rather than replacing them.
 
 </div>
 
