@@ -51,26 +51,26 @@ fonts:
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
 
-<div class="text-2xl font-bold mb-5">Fine-tuning, a genome edit with a shotgun</div>
+<div class="text-2xl font-bold mb-5">Fine-tuning</div>
 
-- Hits the target, damages unrelated abilities
-- A few adversarial examples break safety alignment
-- Even benign data can re-surface blocked capabilities
+- Updates all model weights
+- Side effects on unrelated tasks
+- Not interpretable, not reversible without retraining
 
 </div>
 <div>
 
-<div class="text-2xl font-bold mb-5">SAE features, interpretable switches</div>
+<div class="text-2xl font-bold mb-5">SAE feature steering</div>
 
-- Decompose activations into human-readable directions
-- "refusal to harmful requests", "mathematical reasoning"
-- Flip a handful instead of rewriting weights
+- Adds interpretable feature directions to activations
+- No weight update, reversible at inference
+- Prior methods still need contrastive data or context-token selection
 
 </div>
 </div>
 
 <div class="mt-6 p-5 bg-blue-50 dark:bg-blue-900 rounded text-lg leading-relaxed">
-<b>Linear Representation Hypothesis</b>: networks encode concepts as directions. SAEs find a sparse basis where each direction is one concept, so steering is just adding a direction.
+<b>Linear Representation Hypothesis</b>: networks encode concepts as directions in activation space. SAEs recover a sparse basis where each direction is one concept, so steering is adding a direction.
 </div>
 
 ---
